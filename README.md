@@ -51,6 +51,17 @@ mainloop()
 
 ![Screen Shot 2022-09-14 at 11 15 04 AM](https://user-images.githubusercontent.com/58227052/190194615-0b711ac3-fa22-4e5a-a121-589ccd721ce8.png)
 
-The above is for example only and the path the user gives would need to be stored for later use.
+* Take the input from the user as file path to tell the script where to look for the file that is needed for the analysis:
+#### Example code (sourced from https://stackoverflow.com/questions/52343574/how-to-convert-users-input-to-file-path-in-python)
 
-* 
+```
+import os
+
+path = input("enter filepath: ")
+
+for f in os.listdir(os.path.expanduser(path)):
+    print(f)
+
+```
+
+Using these two ideas together, you could create an input box asking for a file path of where the file resides in the computer. This is just one small way of adding to this script in order to scale this use for other elections. 
